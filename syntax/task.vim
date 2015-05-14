@@ -14,17 +14,20 @@ syntax match taskWorkingItem "^\s*-.*" contains=taskWorkingIcon,taskKeyword
 syntax match taskDoneItem "^✓.*" contains=taskDoneIcon,taskKeyword
 syntax match taskDoneItem "^\s*✓.*" contains=taskDoneIcon,taskKeyword
 
-highlight taskKeyword guifg=#96CBFE guibg=NONE gui=NONE ctermfg=blue ctermbg=NONE cterm=NONE
+highlight taskKeyword guifg=#96CBFE guibg=NONE gui=NONE ctermfg=166 ctermbg=NONE cterm=NONE
 
-highlight taskWorkingItem guifg=#f6f3e8 guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-highlight taskDoneItem guifg=#A8FF60 guibg=NONE gui=italic ctermfg=green ctermbg=NONE cterm=NONE
+highlight Normal guifg=#f6f3e8 guibg=NONE gui=NONE ctermfg=244 ctermbg=NONE cterm=italic
+highlight taskWorkingItem guifg=#f6f3e8 guibg=NONE gui=NONE ctermfg=239 ctermbg=NONE cterm=NONE
+highlight taskDoneItem guifg=#A8FF60 guibg=NONE gui=italic ctermfg=64 ctermbg=NONE cterm=italic
 
 highlight taskWorkingIcon guifg=#FF6C60 guibg=NONE gui=NONE ctermfg=red ctermbg=NONE cterm=NONE
-highlight taskDoneIcon guifg=#A8FF60 guibg=NONE gui=italic ctermfg=green ctermbg=NONE cterm=NONE
+highlight taskDoneIcon guifg=#A8FF60 guibg=NONE gui=italic ctermfg=64 ctermbg=NONE cterm=italic
 
 syntax match sectionTitleLine "^.*:\s*$" contains=sectionTitle
 syntax match sectionTitle "\S.*:\s*$"
-highlight sectionTitle guifg=#96CBFE guibg=NONE gui=bold,underline ctermfg=blue ctermbg=NONE cterm=bold,underline
+highlight sectionTitle guifg=NONE guibg=NONE gui=bold ctermfg=white ctermbg=33 cterm=bold,standout
+
+syntax match taskListTitle /^.*\%1l.*$/
+highlight taskListTitle guifg=NONE guibg=NONE gui=bold ctermfg=white ctermbg=124 cterm=bold,standout,underline
 
 let b:current_syntax = "task"
-
