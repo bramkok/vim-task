@@ -2,7 +2,7 @@ if exists("b:current_syntax")
   finish
 endif
 
-syntax keyword taskKeyword New new Working working Done done Todo TODO todo bug Bug
+syntax keyword taskKeyword New new Working working Done done Todo TODO todo bug Bug Feature feature
 
 syntax match taskWorkingIcon "^-" contained
 syntax match taskWorkingIcon "^\s*-" contained
